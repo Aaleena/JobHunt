@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+	{% for post in object_list %}
+	{% ifequal post.category 'marketing' %}
+	<div class="post-entry">
+		<h2><a href="{% url 'job_detail_marketing' post.pk %}">{{ post.title }}</a></h2>
+	</div>
+	{% endifequal %}
+	{% endfor %}
+{% endblock content %}

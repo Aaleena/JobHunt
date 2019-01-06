@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 	{% for post in object_list %}
-
+	{% ifequal post.category 'IT' %}
 	<div class="post-entry">
-		<h2><a href="{% url 'job_detail' post.pk %}">{{ post.title }}</a></h2>
-		
-
+		<h2><a href="{% url 'job_detail_it' post.pk %}">{{ post.title }}</a></h2>
 	</div>
+	{% endifequal %}
 	{% endfor %}
 {% endblock content %}
