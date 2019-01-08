@@ -13,5 +13,8 @@ class Post(models.Model):
 	)
 	category=models.CharField(max_length=20,choices=category_choices,default='IT',)
 	salary = models.IntegerField()
+	location=models.CharField(max_length=200,default='islamabad',)
+	contact=models.CharField(max_length=200,default='000-0000000',)
+	email=models.CharField(max_length=200,default='abc@mail.com',)
 	def __str__(self):
 		return self.title
