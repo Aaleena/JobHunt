@@ -1,7 +1,9 @@
 from django.urls import path
 from . import views
 
-urlpatterns=[path('',views.JobListView.as_view(),name='home'),
+urlpatterns=[path('',views.JobListView.as_view(),name='index'),
+
+
 	path('post/<int:pk>/',views.JobDetailView.as_view(),name='job_detail'),
 	path('category/it/',views.IT.as_view(),name='it'),
 	path('category/it/<int:pk>/',views.ITDetailView.as_view(),name='job_detail_it'),

@@ -1,10 +1,12 @@
 from django.views.generic import ListView,DetailView
 
+ 
 from .models import Post
+
 
 class JobListView(ListView):
 	model=Post
-	template_name='home.html'
+	template_name='index.html'
 
 class JobDetailView(DetailView):
 	model=Post

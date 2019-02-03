@@ -18,3 +18,5 @@ class Post(models.Model):
 	email=models.CharField(max_length=200,default='abc@mail.com',)
 	def __str__(self):
 		return self.title
+
+

@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+<h2 style="padding-left: 80px; padding-bottom:10px;"> All Teaching related jobs </h2>
 	{% for post in object_list %}
 	{% ifequal post.category 'teaching' %}
-	<div class="post-entry">
+	<div class="post-entry" style="margin-top: 15px;
+	margin-bottom: 10px;
+	margin-right: 150px;
+	margin-left: 80px;">
 		<h2><a href="{% url 'job_detail_teaching' post.pk %}">{{ post.title }}</a></h2>
 	</div>
 	{% endifequal %}
